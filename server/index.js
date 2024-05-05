@@ -19,7 +19,7 @@ mongoose
     "mongodb+srv://supunfit:124028T@bakenddb.6wxf2ah.mongodb.net/?retryWrites=true&w=majority&appName=BakendDB"
   )
   .then(() => {
-    console.log("connectd to database!");
+    console.log("connected to database!");
   })
   .catch((error) => {
     console.log(error);
