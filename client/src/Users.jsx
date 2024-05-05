@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 function Users() {
@@ -12,6 +13,7 @@ function Users() {
   return (
     <div className="d-flex vh-100 bg-primary justify-content align-items-center">
       <div className="w-50 bg-white rounded p-3">
+        <Link to="/create" className="btn btn-success">Add +</Link>
         <table className="table">
           <thead>
             <tr>
@@ -22,18 +24,19 @@ function Users() {
             </tr>
           </thead>
           <tbody>
-            {users.map((user) => {
-              return
-              <tr>
+            {
+            users.map((user) => {
+              return <tr>
                 <td>{user.Name}</td>
                 <td>{user.Email}</td>
                 <td>{user.Age}</td>
                 <td>
-                  <button>Edit</button>
-                  <button>Delete</button>
+                  <Link to="/update" className='btn btn-success'>Update</Link>
+                
                 </td>
               </tr>
-            })}
+            })
+            }
           </tbody>
         </table>
       </div>
